@@ -22,8 +22,8 @@ function insertRowtable(PreformDatos) {
     let indice = document.formul.miSelect.selectedIndex
     let valor = document.formul.miSelect.options[indice].value
 
-    n1 = document.getElementById("n1").value;
-    n2 = document.getElementById("n2").value;
+    n1 = parseInt(document.getElementById("n1").value);
+    n2 = parseInt(document.getElementById("n2").value);
 
     newCelda.textContent = n1;
 
@@ -33,4 +33,9 @@ function insertRowtable(PreformDatos) {
     let newCelda3 = newLineRow.insertCell(2);
     newCelda3.textContent = valor;
 
+    let newCelda4 = newLineRow.insertCell(3);
+    newCelda4.textContent = suma;
+
 }
+
+let suma = (n1 + n2);
