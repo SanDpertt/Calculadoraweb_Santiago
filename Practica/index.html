@@ -17,34 +17,41 @@
 </head>
 
 <body>
-    <form>
-        <div id="Operaciones">
+
+    <div id="Operaciones">
+
+        <form id="formulario" name="formul">
+
             <div class="form-floating">
-                <input type="number" placeholder="Primer número" id="n1">
+                <input type="number" placeholder="Primer número" id="n1" name="n1">
             </div>
 
             <div class="form-floating">
-                <input type="number" placeholder="Segundo número" id="n2">
+                <input type="number" placeholder="Segundo número" id="n2" name="n2">
             </div>
 
-            <select class="form-select" aria-label="Default select example" id="Seleccionador">
+            <div id="Operar">
+                <select class="form-select" name="miSelect" id="Seleccionador">
                   <option selected>Seleccione la operación</option>
-                  <option value="1" id="Suma">Suma</option>
-                  <option value="2" id="Resta">Resta</option>
-                  <option value="3" id="Multiplicaón">Multiplicación</option>
-                  <option value="4" id="División">División</option>        
-        </select>
-            <button>Resolver</button>
-    </form>
+                  <option value="Suma" id="Suma">Suma</option>
+                  <option value="Resta" id="Resta">Resta</option>
+                  <option value="Multiplicación" id="Multiplicaón">Multiplicación</option>
+                  <option value="División" id="División">División</option>        
+                </select>
+            </div>
+
+            <input type="submit" placeholder="Resolver" id="button" onclick="insertRowtable();">
+
+        </form>
     </div>
 
     <div id="tabla">
-        <table class="table table-striped table-bordered table-hover" id="employeeList">
+        <table class="table table-striped table-bordered table-hover" id="tablita">
             <thead>
                 <tr>
-                    <th scope="col">Opracion</th>
-                    <th scope="col" id="p1">Primer número</th>
-                    <th scope="col" id="p2">Segundo número</th>
+                    <th scope="col">Primer número</th>
+                    <th scope="col" id="p1">Segundo número</th>
+                    <th scope="col" id="p2">operación</th>
                     <th scope="col" id="p3">Resultado</th>
                 </tr>
             </thead>
@@ -54,7 +61,7 @@
         </table>
     </div>
 
-    <script src="java.js">
+    <script src="./java.js">
     </script>
 
 </body>
