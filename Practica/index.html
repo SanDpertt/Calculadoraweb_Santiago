@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -7,70 +8,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Logo.jpg">
     <link rel="stylesheet" href="./estilos.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 
     <title>CalWeb</title>
 
 </head>
 
 <body>
+    <form>
+        <div id="Operaciones">
+            <div class="form-floating">
+                <input type="number" placeholder="Primer número" id="n1">
+            </div>
 
-<div id="divi">
-    <div class="form-floating">
-        <input type="number" class="form-control" placeholder="Primer número">
-      </div>
+            <div class="form-floating">
+                <input type="number" placeholder="Segundo número" id="n2">
+            </div>
 
-    <div class="form-floating">
-        <input type="number"  placeholder="Segundo número">
-      </div>
+            <select class="form-select" aria-label="Default select example" id="Seleccionador">
+                  <option selected>Seleccione la operación</option>
+                  <option value="1" id="Suma">Suma</option>
+                  <option value="2" id="Resta">Resta</option>
+                  <option value="3" id="Multiplicaón">Multiplicación</option>
+                  <option value="4" id="División">División</option>        
+        </select>
+            <button>Resolver</button>
+    </form>
+    </div>
 
-    <select class="form-select" aria-label="Default select example" id="Seleccionador">
-        <option selected>Seleccione la operación</option>
-        <option value="1">Suma</option>
-        <option value="2">Resta</option>
-        <option value="3">Multiplicación</option>
-        <option value="4">Divición</option>        
-    </select><br> 
-    <button>Resolver</button>
-</div>   
+    <div id="tabla">
+        <table class="table table-striped table-bordered table-hover" id="employeeList">
+            <thead>
+                <tr>
+                    <th scope="col">Opracion</th>
+                    <th scope="col" id="p1">Primer número</th>
+                    <th scope="col" id="p2">Segundo número</th>
+                    <th scope="col" id="p3">Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
 
-<div id="tabla">
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Opracion</th>
-      <th scope="col" id="p1">Primer número</th>
-      <th scope="col" id="p2">Segundo número</th>
-      <th scope="col" id="p3">Resultado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2"></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-</div>
+            </tbody>
+        </table>
+    </div>
 
-
-
-
-
-
+    <script src="java.js">
+    </script>
 
 </body>
 

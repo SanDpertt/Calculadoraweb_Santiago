@@ -1,7 +1,4 @@
-$(function(){
-
-$("button").click(function(){
-    alert("Que pasa");
-});
-
-}); 
+const form = document.getElementById("formulario")
+form.addEventListener("submit", function(event) {
+    event.preventDefault()
+})
