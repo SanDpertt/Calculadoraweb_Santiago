@@ -1,0 +1,36 @@
+body{
+    background-image: url(./Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+#divi{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#Seleccionador{
+    width: 208px;
+    height: 50px;
+}
+
+input{
+      width: 200px;
+      height: 50px;
+}
+
+button{
+    width: 120px;
+      height: 30px;
+}
+
+#tabla{
+    background-color: white;
+    margin-top: 80px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
