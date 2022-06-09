@@ -3,27 +3,31 @@ const form = document.getElementById("formulario");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let insertRowtable = new FormDatos(form);
-    insertRowtable(PreformDatos)
-
 })
 
-function insertRowtable(PreformDatos) {
+function insertRowtable() {
 
     let Table = document.getElementById("tablita");
     let newLineRow = Table.insertRow(-1);
     let newCelda = newLineRow.insertCell(0);
 
-    let n1 = 0;
-    let n2 = 0;
-    let options = "";
-    let Texto = "";
+    var resultado;
 
     let indice = document.formul.miSelect.selectedIndex
     let valor = document.formul.miSelect.options[indice].value
 
-    n1 = parseInt(document.getElementById("n1").value);
-    n2 = parseInt(document.getElementById("n2").value);
+    var n1 = parseInt(document.getElementById("n1").value);
+    var n2 = parseInt(document.getElementById("n2").value);
+
+    if (valor == "Suma") {
+        resultado = (n1 + n2);
+    } else if (valor == "Resta") {
+        resultado = (n1 - n2);
+    } else if (valor == "Multiplicación") {
+        resultado = (n1 * n2);
+    } else if (valor == "División") {
+        resultado = (n1 / n2);
+    }
 
     newCelda.textContent = n1;
 
@@ -34,8 +38,8 @@ function insertRowtable(PreformDatos) {
     newCelda3.textContent = valor;
 
     let newCelda4 = newLineRow.insertCell(3);
-    newCelda4.textContent = suma;
+    newCelda4.textContent = resultado;
+
+
 
 }
-
-let suma = (n1 + n2);
